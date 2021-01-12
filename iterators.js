@@ -4,8 +4,20 @@
  * - Accepts an array
  * - Logs every element of the array
  ************************************/
-const logger = function (array) {
+// const logger = function (array) {
+//   // Your code here
+// };
+
+// const logger = function (array) {
+//   // Your code here
+//   array.forEach(element => {
+//     console.log(element);
+//   });
+// };
+
+const logger = (array) =>  {
   // Your code here
+  array.forEach(element => console.log(element));
 };
 
 /*************************************
@@ -19,9 +31,20 @@ const logger = function (array) {
  * The conversion is:
  *   C = (F - 32) * (5/9)
  ************************************/
-const toCelsius = function (temperatures) {
+// const toCelsius =  (temperatures) => {
+//   // Your code here
+//   let fahr = temperatures.map((forEach(element) - 32) * (5/9));
+// };
+
+const toCelsius =  (temperatures) => {
   // Your code here
+  let cels = [];
+  return cels = temperatures.map( (temperature) => (temperature - 32) * (5/9));
 };
+
+// console.log(toCelsius([127, 80]));
+// const toCelsius =  (temperatures).map(temperatures => (temperatures - 32) * (5/9) );
+
 
 /**************************************
  * hottestDays(temperatures, threshhold)
@@ -31,9 +54,15 @@ const toCelsius = function (temperatures) {
  * - Returns an array of temperatures
  *   that exceed the threshhold
  ***************************************/
-const hottestDays = function (temperatures, threshhold) {
+const hottestDays = (temperatures, threshhold) => {
   // Your code here
+  let hotDay = [];
+  return hotDay = temperatures.filter((temperature) => temperature > threshhold);
 };
+
+// const hottestDays = function (temperatures, threshhold) {
+//   // Your code here
+// };
 
 /******************************************
  * logHottestDays(temperatures, threshhold)
@@ -51,6 +80,9 @@ const hottestDays = function (temperatures, threshhold) {
  *******************************************/
 const logHottestDays = function (temperatures, threshhold) {
   // Your code here
+  let scorching = hottestDays(temperatures, threshhold);
+  let scorchingCels = toCelsius(scorching);
+  logger(scorchingCels);
 };
 
 /* Uncomment the following lines to test your code... */
