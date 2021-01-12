@@ -80,10 +80,11 @@ const hottestDays = (temperatures, threshhold) => {
  *******************************************/
 const logHottestDays = function (temperatures, threshhold) {
   // Your code here
-  let scorching = hottestDays(temperatures, threshhold);
-  let scorchingCels = toCelsius(scorching);
-  logger(scorchingCels);
+  let scorching = toCelsius(hottestDays(temperatures, threshhold));
+  logger(scorching);
 };
+
+// BY THE WAY, I DID WATCH THE WHOLE VIDEO AND TRIED THE DIFFERENT WAYS TO SOLVE THE LAST QUESTION. I'M WRITING THIS BECAUSE I WASN'T AROUND FOR THE SOLVING SESSION AND HAD TO SOLVE THE LAST ONE ACCORDINGLY. THANK YOU!!
 
 /* Uncomment the following lines to test your code... */
 
